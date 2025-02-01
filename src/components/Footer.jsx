@@ -37,7 +37,7 @@ export default function Footer() {
                             <input
                                 type="email"
                                 placeholder="Enter your email"
-                                className="ancient-input w-80"
+                                className="ancient-input sm:w-80"
                             />
                             <button className="ancient-button">
                                 Subscribe
