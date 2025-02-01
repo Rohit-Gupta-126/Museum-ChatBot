@@ -1,12 +1,12 @@
 "use client";
 import { useCallback } from "react";
 import { Particles } from "react-tsparticles";
-import { loadSlim } from "tsparticles-slim"; // Use loadSlim instead of loadFull
+import { loadSlim } from "tsparticles-slim";
 
 export default function ParticleEffect() {
   const particlesInit = useCallback(async (engine) => {
     console.log("Initializing tsparticles...");
-    await loadSlim(engine); // Use loadSlim for better compatibility
+    await loadSlim(engine);
   }, []);
 
   return (
