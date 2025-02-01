@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-ochre: 183, 121, 31;
+    --color-lapis: 76, 111, 255;
+    --color-terracotta: 217, 119, 6;
+    --color-sienna: 120, 53, 15;
+  }
+
+  body {
+    @apply bg-sienna-900 text-white antialiased;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .ancient-button {
+    @apply px-6 py-3 rounded-lg bg-gradient-to-r from-ochre-600 to-lapis-500 
+           text-white font-medium hover:from-ochre-700 hover:to-lapis-600 
+           transition-all duration-300 shadow-lg shadow-lapis-500/30
+           border border-terracotta-500/20 backdrop-blur-sm;
+  }
+
+  .glass-panel {
+    @apply bg-sienna-900/40 backdrop-blur-md border border-terracotta-500/20 
+           rounded-lg shadow-xl;
+  }
+
+  .ancient-input {
+    @apply block w-full px-4 py-2 bg-sienna-800/50 border border-terracotta-500/20 
+           rounded-md text-white placeholder-white/50 focus:outline-none 
+           focus:border-lapis-500 transition-colors duration-200;
+  }
 }
