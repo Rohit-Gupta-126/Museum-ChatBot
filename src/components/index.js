@@ -1,4 +1,4 @@
-'use client';  // Add this at the top since we're using client-side features
+'use client'
 
 import CurrentExhibitions from './Exhibition/CurrentExhibitions';
 import ExhibitionCalendar from './Exhibition/ExhibitionCalendar';
